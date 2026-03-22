@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Colour Reference</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #143930;
+      color: #f8f1dd;
+      font-family: Georgia, serif;
+      padding: 48px 40px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #8a8070;
+      font-size: 0.85rem;
+      margin-bottom: 48px;
+      font-style: italic;
+    }
+    h2 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #bead89;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(248, 241, 221, 0.08);
+    }
+    .group { margin-bottom: 40px; }
+    .swatches { display: flex; flex-wrap: wrap; gap: 12px; }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 120px;
+    }
+    .swatch-box {
+      width: 100%;
+      height: 72px;
+      border-radius: 10px;
+      border: 1px solid rgba(248, 241, 221, 0.1);
+    }
+    .swatch-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 0.72rem;
+      color: #c4ba9c;
+      letter-spacing: 0.05em;
+    }
+    .swatch-name {
+      font-size: 0.72rem;
+      color: #8a8070;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .pair {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 120px;
+    }
+    .pair .swatch-box-top {
+      width: 100%;
+      height: 36px;
+      border-radius: 10px 10px 0 0;
+      border: 1px solid rgba(248, 241, 221, 0.1);
+      border-bottom: none;
+    }
+    .pair .swatch-box-bot {
+      width: 100%;
+      height: 36px;
+      border-radius: 0 0 10px 10px;
+      border: 1px solid rgba(248, 241, 221, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Colour Reference</h1>
+  <p class="subtitle">All colours currently used in the portfolio — open this file in a browser to see swatches.</p>
+
+  <!-- BACKGROUNDS -->
+  <div class="group">
+    <h2>Backgrounds</h2>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#143930;"></div>
+        <span class="swatch-hex">#143930</span>
+        <span class="swatch-name">Base Background<br/>(all sections)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#112b28;"></div>
+        <span class="swatch-hex">#112b28</span>
+        <span class="swatch-name">Deep Background<br/>(case study mid)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#0a2220;"></div>
+        <span class="swatch-hex">#0a2220</span>
+        <span class="swatch-name">Darkest Background<br/>(contact panel, hero top)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEXT -->
+  <div class="group">
+    <h2>Text</h2>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#f8f1dd;"></div>
+        <span class="swatch-hex">#f8f1dd</span>
+        <span class="swatch-name">Primary Text<br/>(headings, names)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#c4ba9c;"></div>
+        <span class="swatch-hex">#c4ba9c</span>
+        <span class="swatch-name">Secondary Text<br/>(body, descriptions)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#8a8070;"></div>
+        <span class="swatch-hex">#8a8070</span>
+        <span class="swatch-name">Muted Text<br/>(subtitles, meta)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#62604e;"></div>
+        <span class="swatch-hex">#62604e</span>
+        <span class="swatch-name">Faint Text<br/>(triggers, fine print)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#52504e;"></div>
+        <span class="swatch-hex">#52504e</span>
+        <span class="swatch-name">Very Faint Text<br/>(tagline, footer)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCENT / GOLD -->
+  <div class="group">
+    <h2>Accent — Gold</h2>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#bead89;"></div>
+        <span class="swatch-hex">#bead89</span>
+        <span class="swatch-name">Gold Primary<br/>(buttons, labels, borders)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#cfc09e;"></div>
+        <span class="swatch-hex">#cfc09e</span>
+        <span class="swatch-name">Gold Light<br/>(button hover)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#dcd1b0;"></div>
+        <span class="swatch-hex">#dcd1b0</span>
+        <span class="swatch-name">Gold Lighter<br/>(gradient text end, hover text)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#a07840;"></div>
+        <span class="swatch-hex">#a07840</span>
+        <span class="swatch-name">Gold Dark<br/>(logo icon gradient)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYSTEM GREEN -->
+  <div class="group">
+    <h2>System Green (Available / Results)</h2>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#5a9c78;"></div>
+        <span class="swatch-hex">#5a9c78</span>
+        <span class="swatch-name">Sage Green<br/>(available badge, results icon)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#4a8c68;"></div>
+        <span class="swatch-hex">#4a8c68</span>
+        <span class="swatch-name">Sage Dark<br/>(badge dot)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#2d5a3d;"></div>
+        <span class="swatch-hex">#2d5a3d</span>
+        <span class="swatch-name">Sage Border<br/>(available badge border)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOL ICON GRADIENTS -->
+  <div class="group">
+    <h2>Tool Icon Gradients (from → to)</h2>
+    <div class="swatches">
+      <div class="pair">
+        <div class="swatch-box-top" style="background:#3a6a7a;"></div>
+        <div class="swatch-box-bot" style="background:#4a8a9a;"></div>
+        <span class="swatch-hex" style="margin-top:8px;">#3a6a7a → #4a8a9a</span>
+        <span class="swatch-name">Jira (teal-blue)</span>
+      </div>
+      <div class="pair">
+        <div class="swatch-box-top" style="background:#6a4a7a;"></div>
+        <div class="swatch-box-bot" style="background:#8a6a9a;"></div>
+        <span class="swatch-hex" style="margin-top:8px;">#6a4a7a → #8a6a9a</span>
+        <span class="swatch-name">Make (muted purple)</span>
+      </div>
+      <div class="pair">
+        <div class="swatch-box-top" style="background:#6a6a5a;"></div>
+        <div class="swatch-box-bot" style="background:#8a8a7a;"></div>
+        <span class="swatch-hex" style="margin-top:8px;">#6a6a5a → #8a8a7a</span>
+        <span class="swatch-name">Notion (olive-gray)</span>
+      </div>
+      <div class="pair">
+        <div class="swatch-box-top" style="background:#4a7a5a;"></div>
+        <div class="swatch-box-bot" style="background:#5a9a6a;"></div>
+        <span class="swatch-hex" style="margin-top:8px;">#4a7a5a → #5a9a6a</span>
+        <span class="swatch-name">Slack (sage green)</span>
+      </div>
+      <div class="pair">
+        <div class="swatch-box-top" style="background:#7a4a4a;"></div>
+        <div class="swatch-box-bot" style="background:#9a6a6a;"></div>
+        <span class="swatch-hex" style="margin-top:8px;">#7a4a4a → #9a6a6a</span>
+        <span class="swatch-name">TickTick (dusty rose)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOL TAGS (Case Study) -->
+  <div class="group">
+    <h2>Tool Tags — Case Study Flow Labels</h2>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#7ab0c8; border:none;"></div>
+        <span class="swatch-hex">#7ab0c8</span>
+        <span class="swatch-name">Jira Tag Text</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#b09ac8; border:none;"></div>
+        <span class="swatch-hex">#b09ac8</span>
+        <span class="swatch-name">Make Tag Text</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#c8c4b0; border:none;"></div>
+        <span class="swatch-hex">#c8c4b0</span>
+        <span class="swatch-name">Notion Tag Text</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#7ab09a; border:none;"></div>
+        <span class="swatch-hex">#7ab09a</span>
+        <span class="swatch-name">Slack Tag Text</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#c89090; border:none;"></div>
+        <span class="swatch-hex">#c89090</span>
+        <span class="swatch-name">TickTick Tag Text</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATUS BADGES -->
+  <div class="group">
+    <h2>Status Badge Text (Jira Epics)</h2>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#bead89; border:none;"></div>
+        <span class="swatch-hex">#bead89</span>
+        <span class="swatch-name">In Progress<br/>(same as Gold Primary)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#8a8070; border:none;"></div>
+        <span class="swatch-hex">#8a8070</span>
+        <span class="swatch-name">Planned<br/>(same as Muted Text)</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#5a9c78; border:none;"></div>
+        <span class="swatch-hex">#5a9c78</span>
+        <span class="swatch-name">Done<br/>(same as Sage Green)</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

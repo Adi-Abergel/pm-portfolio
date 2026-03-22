@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Font Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #143930;
+      color: #f8f1dd;
+      font-family: 'Geist', sans-serif;
+      padding: 48px 40px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-family: 'Old Standard TT', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #8a8070;
+      font-size: 0.85rem;
+      margin-bottom: 48px;
+      font-style: italic;
+      font-family: 'Old Standard TT', serif;
+    }
+    .section {
+      margin-bottom: 56px;
+    }
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #bead89;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(248, 241, 221, 0.08);
+      font-family: 'Geist', sans-serif;
+    }
+    .font-row {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(248, 241, 221, 0.05);
+    }
+    .font-row:last-child { border-bottom: none; }
+    .font-meta {
+      width: 200px;
+      flex-shrink: 0;
+    }
+    .font-meta .size-label {
+      font-size: 0.7rem;
+      color: #bead89;
+      font-family: 'Geist', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .font-meta .usage-label {
+      font-size: 0.68rem;
+      color: #62604e;
+      font-family: 'Geist', sans-serif;
+      line-height: 1.4;
+    }
+    .font-sample {
+      flex: 1;
+    }
+
+    /* Display font samples */
+    .display-8xl { font-family: 'Old Standard TT', serif; font-size: 5rem; font-weight: 700; line-height: 1.05; color: #f8f1dd; }
+    .display-8xl-italic { font-family: 'Old Standard TT', serif; font-size: 5rem; font-weight: 700; font-style: italic; background: linear-gradient(135deg, #bead89 0%, #cfc09e 50%, #dcd1b0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.05; }
+    .display-5xl { font-family: 'Old Standard TT', serif; font-size: 3rem; font-weight: 700; color: #f8f1dd; line-height: 1.1; }
+    .display-3xl { font-family: 'Old Standard TT', serif; font-size: 1.875rem; font-weight: 700; background: linear-gradient(135deg, #bead89 0%, #cfc09e 50%, #dcd1b0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .display-2xl { font-family: 'Old Standard TT', serif; font-size: 1.5rem; font-weight: 700; color: #f8f1dd; }
+    .display-2xl-italic { font-family: 'Old Standard TT', serif; font-size: 1.5rem; font-weight: 400; font-style: italic; background: linear-gradient(135deg, #bead89 0%, #cfc09e 50%, #dcd1b0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* Sans font samples */
+    .sans-xl { font-family: 'Geist', sans-serif; font-size: 1.25rem; font-weight: 400; color: #c4ba9c; line-height: 1.6; }
+    .sans-xl em { color: #f8f1dd; font-style: normal; font-weight: 500; }
+    .sans-lg { font-family: 'Geist', sans-serif; font-size: 1.125rem; font-weight: 600; color: #f8f1dd; }
+    .sans-base { font-family: 'Geist', sans-serif; font-size: 1rem; font-weight: 700; color: #f8f1dd; }
+    .sans-sm { font-family: 'Geist', sans-serif; font-size: 0.875rem; font-weight: 400; color: #c4ba9c; line-height: 1.6; }
+    .sans-sm-semibold { font-family: 'Geist', sans-serif; font-size: 0.875rem; font-weight: 600; color: #f8f1dd; }
+    .sans-xs { font-family: 'Geist', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #bead89; }
+    .sans-xs-muted { font-family: 'Geist', sans-serif; font-size: 0.75rem; font-weight: 400; color: #62604e; }
+    .sans-xs-nav { font-family: 'Geist', sans-serif; font-size: 0.875rem; font-weight: 500; color: #c4ba9c; }
+
+    .tag {
+      display: inline-block;
+      font-family: 'Geist', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+    .tag-gold { background: #bead89; color: #143930; }
+    .tag-outline { background: rgba(248,241,221,0.04); border: 1px solid rgba(248,241,221,0.2); color: #c4ba9c; }
+    .tag-label { background: rgba(190,173,137,0.1); border: 1px solid rgba(190,173,137,0.3); color: #bead89; }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(248,241,221,0.06);
+      margin: 8px 0 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Font Reference</h1>
+  <p class="subtitle">All type styles currently used in the portfolio — open in a browser to see live rendering.</p>
+
+  <!-- DISPLAY FONT -->
+  <div class="section">
+    <div class="section-label">Display Font — Old Standard TT (Serif)</div>
+    <p style="font-size:0.75rem; color:#8a8070; margin-bottom:16px; font-family:'Geist',sans-serif;">Used for: hero name, all section headings (h2), sub-headings (h3), stats numbers, result metrics</p>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">80px · Bold</div>
+        <div class="usage-label">Hero name "Adi" (first line)</div>
+      </div>
+      <div class="font-sample">
+        <span class="display-8xl">Adi</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">80px · Bold Italic · Gradient</div>
+        <div class="usage-label">Hero name "Abergel" (second line)</div>
+      </div>
+      <div class="font-sample">
+        <span class="display-8xl-italic">Abergel</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">48px · Bold</div>
+        <div class="usage-label">Section headings h2<br/>(Tools, Case Study, Contact)</div>
+      </div>
+      <div class="font-sample">
+        <span class="display-5xl">Tools I Work With</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">30px · Bold · Gradient</div>
+        <div class="usage-label">Stats numbers in hero &amp; results<br/>(5+, 3, A2, ~1,200, 12+)</div>
+      </div>
+      <div class="font-sample">
+        <span class="display-3xl">~1,200 &nbsp; 12+ &nbsp; A2</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">24px · Bold</div>
+        <div class="usage-label">Sub-headings h3<br/>(The Jira Board, Results So Far…)</div>
+      </div>
+      <div class="font-sample">
+        <span class="display-2xl">The Jira Board</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">24px · Italic · Gradient</div>
+        <div class="usage-label">"Together" in Contact heading</div>
+      </div>
+      <div class="font-sample">
+        <span class="display-2xl-italic">Together</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY FONT -->
+  <div class="section">
+    <div class="section-label">Body Font — Geist Sans</div>
+    <p style="font-size:0.75rem; color:#8a8070; margin-bottom:16px; font-family:'Geist',sans-serif;">Used for: everything else — navigation, body copy, descriptions, labels, buttons, tags, badges</p>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">20px · Regular</div>
+        <div class="usage-label">Body paragraphs, sub-headlines<br/>(hero subheadline, intro copy)</div>
+      </div>
+      <div class="font-sample">
+        <span class="sans-xl">I turn complex goals into structured systems — using the right tools to <em>ship work that matters</em>.</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">18px · Semibold</div>
+        <div class="usage-label">Automation card titles, nav "Get in Touch" button</div>
+      </div>
+      <div class="font-sample">
+        <span class="sans-lg">Daily Vocab Reminder</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">16px · Bold</div>
+        <div class="usage-label">Card titles (tool name, epic name)</div>
+      </div>
+      <div class="font-sample">
+        <span class="sans-base">Turning motivation into a sustainable system</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">14px · Semibold</div>
+        <div class="usage-label">Nav links, social link names, CTA button text</div>
+      </div>
+      <div class="font-sample">
+        <span class="sans-sm-semibold">Tools &nbsp;·&nbsp; Case Study &nbsp;·&nbsp; Contact &nbsp;·&nbsp; Say Hello</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">14px · Regular</div>
+        <div class="usage-label">Card descriptions, task list items, automation descriptions</div>
+      </div>
+      <div class="font-sample">
+        <span class="sans-sm">Sprint planning, backlog management, and tracking epics from idea to delivery.</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">12px · Semibold · Uppercase</div>
+        <div class="usage-label">Section eyebrow labels, category tags, badge labels<br/>(gold colour)</div>
+      </div>
+      <div class="font-sample">
+        <span class="sans-xs">Toolkit &nbsp;·&nbsp; Case Study &nbsp;·&nbsp; Project Tracking &nbsp;·&nbsp; Automation</span>
+      </div>
+    </div>
+
+    <div class="font-row">
+      <div class="font-meta">
+        <div class="size-label">12px · Regular</div>
+        <div class="usage-label">Trigger lines, footer text, faint meta labels</div>
+      </div>
+      <div class="font-sample">
+        <span class="sans-xs-muted">Trigger: Every day at 8:00 AM &nbsp;·&nbsp; Built with Next.js · Tailwind CSS · Vercel</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUTTONS & TAGS -->
+  <div class="section">
+    <div class="section-label">Buttons &amp; Tags — Geist Sans</div>
+
+    <div class="font-row" style="align-items:center;">
+      <div class="font-meta">
+        <div class="size-label">Primary Button</div>
+        <div class="usage-label">CTA, "Get in Touch", "Say Hello"<br/>Gold bg · Dark text · 14px semibold</div>
+      </div>
+      <div class="font-sample">
+        <span class="tag tag-gold" style="font-size:0.875rem; padding:10px 24px;">View My Toolkit</span>
+      </div>
+    </div>
+
+    <div class="font-row" style="align-items:center;">
+      <div class="font-meta">
+        <div class="size-label">Secondary Button</div>
+        <div class="usage-label">Ghost outline style · 14px semibold</div>
+      </div>
+      <div class="font-sample">
+        <span class="tag tag-outline" style="font-size:0.875rem; padding:10px 24px;">Case Study</span>
+      </div>
+    </div>
+
+    <div class="font-row" style="align-items:center;">
+      <div class="font-meta">
+        <div class="size-label">Eyebrow Label</div>
+        <div class="usage-label">Section labels above headings<br/>12px · semibold · uppercase · gold</div>
+      </div>
+      <div class="font-sample">
+        <span class="tag tag-label">Case Study</span>
+        &nbsp;
+        <span class="tag tag-label">Toolkit</span>
+        &nbsp;
+        <span class="tag tag-label">Get In Touch</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK SUMMARY -->
+  <div class="section">
+    <div class="section-label">Quick Summary</div>
+    <table style="width:100%; border-collapse:collapse; font-family:'Geist',sans-serif; font-size:0.8rem; color:#c4ba9c;">
+      <thead>
+        <tr style="color:#bead89; border-bottom:1px solid rgba(248,241,221,0.1);">
+          <th style="text-align:left; padding:8px 0; font-weight:600; width:25%;">Font</th>
+          <th style="text-align:left; padding:8px 0; font-weight:600; width:20%;">Style</th>
+          <th style="text-align:left; padding:8px 0; font-weight:600;">Where Used</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(248,241,221,0.05);">
+          <td style="padding:10px 0; color:#f8f1dd;">Old Standard TT</td>
+          <td style="padding:10px 0;">Bold</td>
+          <td style="padding:10px 0;">Hero name (Adi), all h2 section headings, h3 sub-headings, stats numbers</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(248,241,221,0.05);">
+          <td style="padding:10px 0; color:#f8f1dd;">Old Standard TT</td>
+          <td style="padding:10px 0;">Bold Italic + Gradient</td>
+          <td style="padding:10px 0;">Hero name (Abergel), "Together" in Contact</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(248,241,221,0.05);">
+          <td style="padding:10px 0; color:#f8f1dd;">Geist Sans</td>
+          <td style="padding:10px 0;">Regular / Medium</td>
+          <td style="padding:10px 0;">All body copy, descriptions, paragraphs</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(248,241,221,0.05);">
+          <td style="padding:10px 0; color:#f8f1dd;">Geist Sans</td>
+          <td style="padding:10px 0;">Semibold / Bold</td>
+          <td style="padding:10px 0;">Navigation, buttons, card titles, section labels</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0; color:#f8f1dd;">Geist Mono</td>
+          <td style="padding:10px 0;">—</td>
+          <td style="padding:10px 0; color:#62604e;">Loaded but not currently used visibly on the site</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
