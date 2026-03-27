@@ -52,12 +52,12 @@ export default function AboutPage() {
             <p className="text-[#f8f1dd] text-xs font-semibold uppercase tracking-[0.2em] mb-5">The Story</p>
             <div className="space-y-4 text-[#c4ba9c] leading-relaxed">
               <p>
-                I started my career as a nurse in an oncology day ward. Every shift was a live project — multiple patients,
+                I started my career as a nurse in an oncology day ward. Every shift was a live project: multiple patients,
                 overlapping treatments, tight protocols, and a team that had to stay perfectly in sync. Nobody called it
                 project management, but that&apos;s exactly what it was.
               </p>
               <p>
-                When I moved into operations at IQVIA, I brought that same instinct with me — the need to know where
+                When I moved into operations at IQVIA, I brought that same instinct with me, the need to know where
                 everything stands, who owns what, and what happens if something slips. Working across international teams
                 on complex multi-stakeholder projects, I started formalising what had always come naturally: mapping
                 processes, closing gaps, and building workflows that don&apos;t depend on one person holding everything
@@ -72,14 +72,14 @@ export default function AboutPage() {
             <p className="text-[#f8f1dd] text-xs font-semibold uppercase tracking-[0.2em] mb-5">What Drives Me</p>
             <div className="space-y-4 text-[#c4ba9c] leading-relaxed">
               <p>
-                I believe a great PM&apos;s job isn&apos;t to control a project — it&apos;s to build the conditions where
+                I believe a great PM&apos;s job isn&apos;t to control a project; it&apos;s to build the conditions where
                 the project runs well without constant input. That means clear structure, the right mindset, and processes
                 that scale. My approach is creating visibility, reducing friction, and designing workflows that the team
-                can actually trust — whatever the toolstack looks like.
+                can actually trust, whatever the toolstack looks like.
               </p>
               <p>
                 I recently moved to Prague and I&apos;m looking for a PM or Operations role in an international team
-                where process and structure are seen as enablers, not obstacles — and where I can help build something
+                where process and structure are seen as enablers, not obstacles, and where I can help build something
                 that lasts.
               </p>
             </div>

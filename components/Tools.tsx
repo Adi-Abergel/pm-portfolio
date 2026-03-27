@@ -42,7 +42,7 @@ const tools = [
     name: 'Slack',
     href: '/tools/slack',
     category: 'Communication',
-    description: 'Async-first communication, organized channels, and integrations that bring all signals into one place.',
+    description: 'Structured async communication, organized channels, and integrations that bring all signals into one place.',
     useFor: 'Async team comms & integrations',
     glowColor: 'rgba(74, 194, 107, 0.12)',
     logo: (
@@ -58,7 +58,7 @@ const tools = [
     name: 'TickTick',
     href: '/tools/ticktick',
     category: 'Tracking Productivity',
-    description: 'Daily task management — outlining the workflows, tracking teams productivity and backlog.',
+    description: 'Daily task management: outlining the workflows, tracking team productivity and backlog.',
     useFor: 'Daily tasks & habit formation',
     glowColor: 'rgba(37, 99, 235, 0.15)',
     logo: (
@@ -89,7 +89,7 @@ export default function Tools() {
           </h2>
           <p className="text-[#c4ba9c] mt-4 max-w-xl mx-auto leading-relaxed">
             Every great PM has a stack. These are the tools I use to plan,
-            execute, and automate — from big-picture roadmaps to daily tasks.
+            execute and automate, from broad roadmaps to daily tasks.
           </p>
         </div>
 

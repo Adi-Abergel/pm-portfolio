@@ -16,7 +16,7 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p className="text-[#c4ba9c] text-base md:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
-          I turn complex goals into structured systems —{' '}
+          I turn complex goals into structured systems,{' '}
           <span className="text-[#f8f1dd] font-medium">because the right process is what makes results possible</span>.
         </p>
 

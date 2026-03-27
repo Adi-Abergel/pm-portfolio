@@ -15,7 +15,7 @@ const screenshots = [
   {
     src: '/make/message-to-slack-channel.png',
     title: 'Smart Message Processor — Slack Output',
-    description: 'The processed message lands in the correct Slack channel — clean, structured, and routed automatically.',
+    description: 'The processed message lands in the correct Slack channel: clean, structured, and routed automatically.',
   },
   {
     src: '/make/czech-email.png',
@@ -36,7 +36,7 @@ const automations = [
     context: 'Physical Sites Project',
     contextColor: 'bg-[#1a3a4a]/60 text-[#7ab0c8] border border-[#4a7a9a]/40',
     description:
-      'Field staff submit issue reports via Google Form directly from the site. Make picks up the submission, formats it into a clear alert, and routes it to the warehouse team on Slack — replacing ad hoc calls and messages with a consistent, trackable notification flow.',
+      'Field staff submit issue reports via Google Form directly from the site. Make picks up the submission, formats it into a clear alert, and routes it to the warehouse team on Slack, replacing ad hoc calls and messages with a consistent, trackable notification flow.',
     trigger: 'Google Form submission',
     triggerIcon: (
       <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -44,7 +44,7 @@ const automations = [
       </svg>
     ),
     flow: ['Google Forms', 'Make', 'Slack'],
-    outcome: 'Site teams report issues in seconds. Warehouse gets a clean, structured alert — no miscommunication or lost requests.',
+    outcome: 'Site teams report issues in seconds. Warehouse gets a clean, structured alert with no miscommunication or lost requests.',
   },
   {
     id: 'smart-message',
@@ -52,7 +52,7 @@ const automations = [
     context: 'Cross-Project',
     contextColor: 'bg-[#2a1a3a]/60 text-[#b09ac8] border border-[#7a5a9a]/40',
     description:
-      'Users submit free-text through a Google Form — no structure required. Make processes the raw input, extracts the key information, and transforms it into a concise, actionable message that gets posted to the right Slack channel automatically. The result: complex or messy communication becomes clear and routable without any manual editing.',
+      'Users submit free-text through a Google Form with no structure required. Make processes the raw input, extracts the key information, and transforms it into a concise, actionable message that gets posted to the right Slack channel automatically. The result: complex or messy communication becomes clear and routable without any manual editing.',
     trigger: 'Google Form free-text submission',
     triggerIcon: (
       <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -60,7 +60,7 @@ const automations = [
       </svg>
     ),
     flow: ['Google Forms', 'Make', 'Slack Channel'],
-    outcome: 'Messy free-text in, clean actionable message out — routed to the right channel automatically.',
+    outcome: 'Messy free-text in, clean actionable message out, routed to the right channel automatically.',
   },
   {
     id: 'czech-suite',
@@ -68,7 +68,7 @@ const automations = [
     context: 'Personal Project',
     contextColor: 'bg-[#1a3a2a]/60 text-[#7ab09a] border border-[#4a8a6a]/40',
     description:
-      'Two automations that turn language learning into a structured daily loop — no apps, no subscriptions, just email. The first sends a short A1-level Czech text every day at noon. The second receives the student\'s translation, passes it to Gemini inside Make, and sends back detailed, personalised feedback within seconds.',
+      'Two automations that turn language learning into a structured daily loop: no apps, no subscriptions, just email. The first sends a short A1-level Czech text every day at noon. The second receives the student\'s translation, passes it to Gemini inside Make, and sends back detailed, personalised feedback within seconds.',
     trigger: 'Schedule · Incoming email',
     triggerIcon: (
       <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -80,17 +80,17 @@ const automations = [
       { name: 'Daily Czech Text', schedule: 'Every day · 12:00 PM', detail: 'A short A1-level Czech text is sent by email. The student reads it and replies with their translation.' },
       { name: 'Translation Feedback', schedule: 'On every new email reply', detail: 'Make receives the reply, sends it to Gemini for comparison, and returns detailed personalised feedback within seconds.' },
     ],
-    outcome: 'A full learning loop — text delivered, translation submitted, feedback returned — entirely automated.',
+    outcome: 'A full learning loop: text delivered, translation submitted, feedback returned- entirely automated.',
   },
 ];
 
 const capabilities = [
-  { title: 'Form-triggered workflows', description: 'Any Google Form submission can kick off a multi-step automation — no code, no delay.' },
+  { title: 'Form-triggered workflows', description: 'Any Google Form submission can kick off a multi-step automation with no code and no delay.' },
   { title: 'AI-powered message processing', description: 'Raw free-text transformed into structured, actionable output before it reaches anyone.' },
   { title: 'Scheduled data delivery', description: 'Timed automations that pull from databases and deliver exactly what\'s needed, when it\'s needed.' },
   { title: 'Cross-app routing', description: 'Data moves between Google Forms, Gemini, Slack, and Email without any manual handoffs.' },
-  { title: 'AI-powered feedback loops', description: 'Make passes user input to Gemini, which processes and evaluates it, then returns personalised feedback automatically — in seconds.' },
-  { title: 'Zero-maintenance pipelines', description: 'Once built, these flows run silently in the background — reliable and hands-off.' },
+  { title: 'AI-powered feedback loops', description: 'Make passes user input to Gemini, which processes and evaluates it, then returns personalised feedback automatically, in seconds.' },
+  { title: 'Zero-maintenance pipelines', description: 'Once built, these flows run silently in the background, reliable and hands-off.' },
 ];
 
 const toolColors: Record<string, string> = {
@@ -138,7 +138,7 @@ export default function MakePage() {
         <p className="text-[#c4ba9c] text-lg leading-relaxed max-w-2xl mx-auto">
           Make is where I turn repetitive work into automated pipelines. From routing
           site reports to the right team, to processing free-text into structured Slack messages,
-          or keeping a language learning project running on schedule — these automations run silently
+          or keeping a language learning project running on schedule, these automations run silently
           so nothing falls through the cracks.
         </p>
       </section>
@@ -149,7 +149,7 @@ export default function MakePage() {
           <p className="text-[#bead89] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Automation Portfolio</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-[#f8f1dd] tracking-tight">3 Automations · 3 Contexts</h2>
           <p className="text-[#c4ba9c] mt-4 max-w-xl mx-auto text-sm leading-relaxed">
-            Built across different projects — each one solving a communication or consistency problem.
+            Built across different projects, each one solving a communication or consistency problem.
           </p>
         </div>
 

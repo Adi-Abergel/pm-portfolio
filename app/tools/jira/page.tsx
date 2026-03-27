@@ -13,7 +13,7 @@ const epics = [
 
 const sprints = [
   {
-    name: 'Sprint 2 — A1.2 Elementary',
+    name: 'Sprint 2: A1.2 Elementary',
     dates: 'Mar 23 – Mar 31, 2026',
     status: 'Active',
     stories: [
@@ -26,7 +26,7 @@ const sprints = [
     ],
   },
   {
-    name: 'Sprint 3 — A1.2 Elementary',
+    name: 'Sprint 3: A1.2 Elementary',
     dates: 'Apr 1 – Apr 20, 2026',
     status: 'Planned',
     stories: [
@@ -39,7 +39,7 @@ const screenshots = [
   {
     src: '/jira/active-sprints 2.png',
     title: 'Active Sprint Board',
-    description: 'Sprint 2 — A1.2 Elementary (Mar 23–31, 2026). Stories tracked across In Progress, Actively Learning, Practice, and Done columns.',
+    description: 'Sprint 2: A1.2 Elementary (Mar 23–31, 2026). Stories tracked across In Progress, Actively Learning, Practice, and Done columns.',
   },
   {
     src: '/jira/backlog.png',
@@ -96,7 +96,7 @@ export default function JiraPage() {
         </h1>
         <p className="text-[#8a8070] text-sm mb-4">Project Tracking · Atlassian</p>
         <p className="text-[#c4ba9c] text-lg leading-relaxed max-w-2xl mx-auto">
-          A personal Jira space that frames Czech language learning as a structured product initiative —
+          A personal Jira space that frames Czech language learning as a structured product initiative:
           7 epics, Scrum sprints, and a 2-year roadmap to A2 fluency and permanent residency.
         </p>
       </section>

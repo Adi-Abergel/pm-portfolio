@@ -20,7 +20,7 @@ const integrations = [
       </svg>
     ),
     title: 'Make → Slack',
-    description: 'Automated pipelines built in Make deliver messages directly to Slack — no manual work required. Daily reminders and weekly progress reports are triggered on a schedule and posted to dedicated channels.',
+    description: 'Automated pipelines built in Make deliver messages directly to Slack with no manual work required. Daily reminders and weekly progress reports are triggered on a schedule and posted to dedicated channels.',
     automations: [
       { name: 'Daily Reminder', trigger: 'Daily', detail: 'Automated reminder sent to Slack on a daily schedule' },
       { name: 'Weekly Progress Report', trigger: 'Weekly', detail: 'TickTick completed tasks aggregated and posted to Slack' },
@@ -45,9 +45,9 @@ const integrations = [
 ];
 
 const useCases = [
-  { title: 'Async-first communication', description: 'Organised channels keep conversations structured and searchable — no information lost in chat.' },
+  { title: 'Structured async communication', description: 'Organised channels keep conversations structured and searchable, no information lost in chat.' },
   { title: 'Centralised notifications', description: 'All signals from Jira, Make, and TickTick flow into Slack, making it the single source of live updates.' },
-  { title: 'Automation delivery layer', description: 'Slack acts as the output layer for every Make automation — reminders, reports, and sprint updates all land here.' },
+  { title: 'Automation delivery layer', description: 'Slack acts as the output layer for every Make automation: reminders, reports, and sprint updates all land here.' },
   { title: 'Progress visibility', description: 'Dedicated channels for daily tasks and weekly reviews make progress tangible and consistent.' },
 ];
 
@@ -88,7 +88,7 @@ export default function SlackPage() {
         </h1>
         <p className="text-[#8a8070] text-sm mb-4">Communication · Slack Technologies</p>
         <p className="text-[#c4ba9c] text-lg leading-relaxed max-w-2xl mx-auto">
-          More than a messaging app — Slack is the central hub where every tool in the stack delivers its output.
+          More than a messaging app, Slack is the central hub where every tool in the stack delivers its output.
           Jira updates, Make automations, and TickTick reports all converge here, making it the
           single source of live project signals.
         </p>
@@ -130,7 +130,7 @@ export default function SlackPage() {
           <p className="text-[#bead89] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Integrations</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-[#f8f1dd] tracking-tight">Every Tool Talks to Slack</h2>
           <p className="text-[#c4ba9c] mt-4 max-w-xl mx-auto text-sm leading-relaxed">
-            Slack sits at the end of automation pipelines — the place where all signals arrive and nothing goes unseen.
+            Slack sits at the end of automation pipelines, where all signals arrive and nothing goes unseen.
           </p>
         </div>
 

@@ -2,11 +2,11 @@ import Link from 'next/link';
 import ScreenshotLightbox from '@/components/ScreenshotLightbox';
 
 const phases = [
-  { phase: 'Phase 1 — Discovery & Planning', start: 'Jan 1, 2025',  end: 'Jan 31, 2025',  status: 'Done' },
-  { phase: 'Phase 2 — Design & Prototyping', start: 'Feb 1, 2025',  end: 'Mar 15, 2025',  status: 'Done' },
-  { phase: 'Phase 3 — Development',          start: 'Mar 16, 2025', end: 'May 15, 2025',  status: 'In Progress' },
-  { phase: 'Phase 4 — Testing & QA',         start: 'May 16, 2025', end: 'Jun 1, 2025',   status: 'To Do' },
-  { phase: 'Phase 5 — Launch',               start: 'Jun 2, 2025',  end: 'Jun 30, 2025',  status: 'To Do' },
+  { phase: 'Phase 1: Discovery & Planning', start: 'Jan 1, 2025',  end: 'Jan 31, 2025',  status: 'Done' },
+  { phase: 'Phase 2: Design & Prototyping', start: 'Feb 1, 2025',  end: 'Mar 15, 2025',  status: 'Done' },
+  { phase: 'Phase 3: Development',          start: 'Mar 16, 2025', end: 'May 15, 2025',  status: 'In Progress' },
+  { phase: 'Phase 4: Testing & QA',         start: 'May 16, 2025', end: 'Jun 1, 2025',   status: 'To Do' },
+  { phase: 'Phase 5: Launch',               start: 'Jun 2, 2025',  end: 'Jun 30, 2025',  status: 'To Do' },
 ];
 
 const risks = [
@@ -21,7 +21,7 @@ const screenshots = [
   {
     src: '/notion/overview.png',
     title: 'Project Overview',
-    description: 'FitTrack project home — goals, timeline, PM details, and phase progress at a glance.',
+    description: 'FitTrack project home: goals, timeline, PM details, and phase progress at a glance.',
   },
   {
     src: '/notion/roadmap.png',
@@ -36,7 +36,7 @@ const screenshots = [
   {
     src: '/notion/meeting-notes.png',
     title: 'Meeting Notes',
-    description: 'Structured meeting pages — Kickoff & Design Review.',
+    description: 'Structured meeting pages: Kickoff & Design Review.',
   },
   {
     src: '/notion/risk-log.png',
@@ -101,7 +101,7 @@ export default function NotionPage() {
         </h1>
         <p className="text-[#8a8070] text-sm mb-4">Documentation · Notion</p>
         <p className="text-[#c4ba9c] text-lg leading-relaxed max-w-2xl mx-auto">
-          A mock Notion workspace simulating a full PM setup for a mobile fitness app launch —
+          A mock Notion workspace simulating a full PM setup for a mobile fitness app launch,
           covering the complete project lifecycle from discovery to App Store release.
         </p>
       </section>

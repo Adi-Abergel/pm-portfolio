@@ -66,7 +66,7 @@ export default function CaseStudy() {
           </h2>
           <p className="text-[#c4ba9c] max-w-2xl mx-auto text-lg leading-relaxed">
             Most people treat language learning as a hobby. I treat it as a
-            project — with epics, sprints, automations, and a clear goal:{' '}
+            project, with epics, sprints, automations, and a clear goal:{' '}
             <span className="text-[#bead89] font-semibold">reach A2 fluency</span>{' '}
             after 2 years of structured practice.
           </p>
@@ -85,7 +85,7 @@ export default function CaseStudy() {
               <h3 className="text-xl font-bold text-[#f8f1dd] mb-2">Turning motivation into a sustainable system</h3>
               <p className="text-[#c4ba9c] leading-relaxed">
                 Language learning has a notorious dropout rate. Without structure, progress is invisible and motivation fades.
-                The challenge was to apply the same project management discipline I&apos;d use professionally — defining clear goals,
+                The challenge was to apply the same project management discipline I&apos;d use professionally: defining clear goals,
                 breaking them into measurable tasks, automating consistency, and reviewing progress objectively.
               </p>
             </div>
@@ -206,9 +206,9 @@ export default function CaseStudy() {
             <div className="pt-6 border-t border-[#f8f1dd]/[0.06]">
               <p className="text-xs text-[#bead89] uppercase tracking-[0.2em] font-semibold mb-3">What I Learned</p>
               <p className="text-[#c4ba9c] leading-relaxed text-sm">
-                Treating a personal project with PM rigor doesn&apos;t just improve outcomes — it builds the muscle memory for
+                Treating a personal project with PM rigor doesn&apos;t just improve outcomes; it builds the muscle memory for
                 professional project work. The discipline of sprint planning, retrospectives, and automation thinking transfers
-                directly. Learning Czech didn&apos;t get easier — the process did. And when the process is right, results follow.
+                directly. Learning Czech didn&apos;t get easier, the process did. And when the process is right, results follow.
               </p>
             </div>
           </div>
