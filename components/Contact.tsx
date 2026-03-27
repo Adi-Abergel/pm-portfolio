@@ -39,19 +39,19 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-28 px-6 bg-[#143930] relative overflow-hidden">
+    <section id="contact" className="py-28 px-6 bg-transparent relative overflow-hidden">
       {/* Checkerboard texture */}
-      <div className="absolute inset-0 checker-bg" />
+      
       {/* Subtle top fade & vignette */}
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0a2220]/18 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_50%,_#143930_100%)]" />
+      
 
       <div className="max-w-3xl mx-auto relative z-10">
         {/* Main CTA panel */}
         <div className="relative rounded-3xl overflow-hidden mb-12">
           {/* Gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a2220]/90 via-[#112b28]/80 to-[#143930]/90" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#bead89]/6 to-[#cfc09e]/6" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#bead89]/6 to-[#e8dfc8]/6" />
           <div className="absolute inset-0 border border-[#f8f1dd]/[0.08] rounded-3xl" />
 
           {/* Decorative gradient line at top */}
@@ -72,13 +72,13 @@ export default function Contact() {
               sounds like a match, I&apos;d love to chat.
             </p>
 
-            <p className="text-[#62604e] text-sm mb-1">+420 604 963 525</p>
-            <p className="text-[#62604e] text-sm mb-8">{EMAIL}</p>
+            <p className="text-[#e8dfc8] text-sm mb-1">+420 604 963 525</p>
+            <p className="text-[#e8dfc8] text-sm mb-8">{EMAIL}</p>
 
             {/* Email CTA */}
             <button
               onClick={handleCopy}
-              className="group inline-flex items-center gap-3 bg-[#bead89] hover:bg-[#cfc09e] text-[#143930] px-9 py-4 rounded-full font-semibold text-base transition-all duration-300 shadow-xl shadow-[#bead89]/20 hover:shadow-[#bead89]/35 hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-3 bg-[#bead89] hover:bg-[#e8dfc8] text-[#143930] px-9 py-4 rounded-full font-semibold text-base transition-all duration-300 shadow-md shadow-[#bead89]/10 hover:shadow-lg hover:shadow-[#bead89]/15 hover:-translate-y-0.5"
             >
               {copied ? (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -107,7 +107,7 @@ export default function Contact() {
               <span className="transition-colors">{social.icon}</span>
               <div>
                 <p className="text-sm font-semibold text-[#f8f1dd] group-hover:text-inherit transition-colors">{social.name}</p>
-                <p className="text-xs text-[#62604e]">{social.label}</p>
+                <p className="text-xs text-[#e8dfc8]">{social.label}</p>
               </div>
               <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -118,13 +118,13 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="text-center pt-8 border-t border-[#f8f1dd]/[0.05]">
-          <div className="flex items-center justify-center gap-2 text-[#52504e] text-xs">
+          <div className="flex items-center justify-center gap-2 text-[#e8dfc8] text-xs">
             <span>Built with</span>
-            <span className="text-[#62604e] font-medium">Next.js</span>
+            <span className="text-[#e8dfc8] font-medium">Next.js</span>
             <span className="text-[#4a4030]">·</span>
-            <span className="text-[#62604e] font-medium">Tailwind CSS</span>
+            <span className="text-[#e8dfc8] font-medium">Tailwind CSS</span>
             <span className="text-[#4a4030]">·</span>
-            <span className="text-[#62604e] font-medium">Vercel</span>
+            <span className="text-[#e8dfc8] font-medium">Vercel</span>
             <span className="text-[#4a4030]">·</span>
             <span>Adi Abergel {new Date().getFullYear()}</span>
           </div>

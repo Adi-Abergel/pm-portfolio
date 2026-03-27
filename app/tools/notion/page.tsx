@@ -110,7 +110,7 @@ export default function NotionPage() {
       <section className="relative z-10 px-6 pb-16 max-w-5xl mx-auto">
         <div className="relative rounded-2xl p-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a2220]/80 to-[#112b28]/80 border border-[#bead89]/20 rounded-2xl" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#bead89]/5 to-[#cfc09e]/5 rounded-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#bead89]/5 to-[#e8dfc8]/5 rounded-2xl" />
           <div className="relative flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1">
               <p className="text-[#bead89] text-xs uppercase tracking-[0.2em] font-semibold mb-2">Project Goal</p>
@@ -122,7 +122,7 @@ export default function NotionPage() {
                 <div key={m.label}>
                   <p className="font-display text-3xl font-bold gradient-text">{m.value}</p>
                   <p className="text-[#f8f1dd] text-xs font-medium mt-1">{m.label}</p>
-                  <p className="text-[#62604e] text-xs mt-0.5">{m.sub}</p>
+                  <p className="text-[#e8dfc8] text-xs mt-0.5">{m.sub}</p>
                 </div>
               ))}
             </div>

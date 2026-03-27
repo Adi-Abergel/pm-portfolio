@@ -28,11 +28,11 @@ const statusStyles: Record<string, { badge: string; dot: string }> = {
     dot: 'bg-[#bead89]',
   },
   'Planned': {
-    badge: 'bg-[#143930]/60 text-[#8a8070] border border-[#52504e]/40',
+    badge: 'bg-transparent/60 text-[#8a8070] border border-[#52504e]/40',
     dot: 'bg-[#62604e]',
   },
   'Done': {
-    badge: 'bg-[#143930]/60 text-[#5a9c78] border border-[#3a7a58]/40',
+    badge: 'bg-transparent/60 text-[#5a9c78] border border-[#3a7a58]/40',
     dot: 'bg-[#5a9c78]',
   },
 };
@@ -47,12 +47,12 @@ const toolColors: Record<string, string> = {
 
 export default function CaseStudy() {
   return (
-    <section id="case-study" className="pt-10 pb-28 px-6 relative overflow-hidden bg-[#143930]">
+    <section id="case-study" className="pt-10 pb-28 px-6 relative overflow-hidden bg-transparent">
       {/* Checkerboard texture */}
-      <div className="absolute inset-0 checker-bg" />
+      
       {/* Subtle top fade & vignette */}
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0a2220]/18 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_50%,_#143930_100%)]" />
+      
 
       <div className="max-w-5xl mx-auto relative z-10">
 
@@ -95,7 +95,7 @@ export default function CaseStudy() {
         {/* Goal Banner */}
         <div className="relative rounded-2xl p-8 mb-12 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a2220]/80 to-[#112b28]/80 border border-[#bead89]/20 rounded-2xl" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#bead89]/5 to-[#cfc09e]/5 rounded-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#bead89]/5 to-[#e8dfc8]/5 rounded-2xl" />
           <div className="relative flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1">
               <p className="text-[#bead89] text-xs uppercase tracking-[0.2em] font-semibold mb-2">
@@ -148,7 +148,7 @@ export default function CaseStudy() {
                     </div>
                     <h4 className="font-bold text-[#f8f1dd] text-lg mb-2 group-hover:text-[#dcd1b0] transition-colors">{auto.title}</h4>
                     <p className="text-[#c4ba9c] text-sm leading-relaxed">{auto.description}</p>
-                    <p className="text-xs text-[#62604e] mt-3 flex items-center gap-1.5">
+                    <p className="text-xs text-[#e8dfc8] mt-3 flex items-center gap-1.5">
                       <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -158,7 +158,7 @@ export default function CaseStudy() {
 
                   {/* Right: Flow visualization */}
                   <div className="flex items-center gap-2 md:flex-col md:items-end justify-start md:justify-center">
-                    <p className="text-xs text-[#62604e] uppercase tracking-widest mb-0 md:mb-2 md:self-start sr-only md:not-sr-only">Flow</p>
+                    <p className="text-xs text-[#e8dfc8] uppercase tracking-widest mb-0 md:mb-2 md:self-start sr-only md:not-sr-only">Flow</p>
                     <div className="flex items-center gap-2 flex-wrap md:flex-col md:items-end">
                       {auto.tools.map((tool, i) => (
                         <div key={tool} className="flex items-center gap-2">
@@ -166,7 +166,7 @@ export default function CaseStudy() {
                             {tool}
                           </span>
                           {i < auto.tools.length - 1 && (
-                            <svg className="w-3 h-3 text-[#62604e] shrink-0 md:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <svg className="w-3 h-3 text-[#e8dfc8] shrink-0 md:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
                           )}
@@ -198,7 +198,7 @@ export default function CaseStudy() {
                 <div key={r.label} className="text-center">
                   <p className="font-display text-3xl font-bold gradient-text mb-1">{r.metric}</p>
                   <p className="text-[#f8f1dd] text-sm font-medium">{r.label}</p>
-                  <p className="text-[#62604e] text-xs mt-0.5">{r.sub}</p>
+                  <p className="text-[#e8dfc8] text-xs mt-0.5">{r.sub}</p>
                 </div>
               ))}
             </div>

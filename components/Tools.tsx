@@ -71,12 +71,12 @@ const tools = [
 
 export default function Tools() {
   return (
-    <section id="tools" className="pt-10 pb-28 px-6 bg-[#143930] relative overflow-hidden">
+    <section id="tools" className="pt-10 pb-28 px-6 bg-transparent relative overflow-hidden">
       {/* Checkerboard texture */}
-      <div className="absolute inset-0 checker-bg" />
+      
       {/* Subtle top fade & vignette */}
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0a2220]/18 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_50%,_#143930_100%)]" />
+      
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section header */}

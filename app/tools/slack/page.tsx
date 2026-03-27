@@ -161,7 +161,7 @@ export default function SlackPage() {
                         <span className={`w-1.5 h-1.5 rounded-full ${integration.dot}`} />
                         <p className="font-semibold text-[#f8f1dd] text-sm">{auto.name}</p>
                       </span>
-                      <span className="text-xs text-[#62604e] flex items-center gap-1 ml-3 sm:ml-0">
+                      <span className="text-xs text-[#e8dfc8] flex items-center gap-1 ml-3 sm:ml-0">
                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>

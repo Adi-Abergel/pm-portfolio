@@ -19,10 +19,11 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #163930 0%, #2e6b50 100%) fixed;
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
 
 @keyframes float {

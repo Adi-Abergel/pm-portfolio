@@ -167,7 +167,7 @@ export default function MakePage() {
                         {auto.context}
                       </span>
                     </div>
-                    <p className="text-xs text-[#62604e] flex items-center gap-1.5 mt-1">
+                    <p className="text-xs text-[#e8dfc8] flex items-center gap-1.5 mt-1">
                       {auto.triggerIcon}
                       Trigger: {auto.trigger}
                     </p>
@@ -182,7 +182,7 @@ export default function MakePage() {
                         {tool}
                       </span>
                       {i < auto.flow.length - 1 && (
-                        <svg className="w-3 h-3 text-[#62604e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <svg className="w-3 h-3 text-[#e8dfc8] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                       )}
@@ -204,7 +204,7 @@ export default function MakePage() {
                           <span className="w-1.5 h-1.5 rounded-full bg-[#7ab09a]" />
                           <p className="font-semibold text-[#f8f1dd] text-sm">{sub.name}</p>
                         </span>
-                        <span className="text-xs text-[#62604e] flex items-center gap-1 ml-3 sm:ml-0">
+                        <span className="text-xs text-[#e8dfc8] flex items-center gap-1 ml-3 sm:ml-0">
                           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>

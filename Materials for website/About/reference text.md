@@ -1,0 +1,11 @@
+# Reference Text
+
+**About section from LinkedIn**- I specialize in creating structure and efficiency within complex operational environments. With a professional background in Regulatory Operations (IQVIA) and Nursing, I have a track record of managing high-stakes tasks in complicated projects where precision and adherence to protocols are essential.   My approach combines Lean methodology with modern AI automation tools (such as Make and Zapier). The challenge of taking manual workflows and turning them into streamlined, logical processes that save time and reduce manual errors is something I'm not only passionate about but truly enjoy. My Current Focus: Having recently relocated to Prague, Czech Republic, I am looking for a Project Management or Operations role within an international environment. My priority is finding a stable team where I can apply my experience in process improvement and automation to create long-term value.
+
+why PM-
+My transition from clinical nursing to Project Management was driven by a fundamental realization: while I excel at high-stakes clinical delivery, my greatest impact lies in optimizing the systems that support it. At IQVIA, I’ve successfully pivoted from bedside care to operational strategy, utilizing Lean methodology to eliminate bottlenecks. I am now seeking to leverage this unique blend of clinical logic and technical 'no-code' expertise to lead complex projects that prioritize efficiency and scalable innovation.
+
+Having managed high-stakes timelines for international stakeholders, I’ve learned that the best projects are won through data-driven decisions and process automation. I am pivoting into PM and AI implementation roles to apply my Lean Practitioner mindset to the next generation of healthcare and business operations in the Czech Republic
+
+
+I am a Lean Project Manager with a unique origin story in Clinical Nursing. My career has evolved from managing individual patient outcomes to be a part of complex, multi-national operational workflows at IQVIA. I am passionate about the intersection of AI implementation and process optimization, using tools like Zapier and Make to transform manual bottlenecks into streamlined, automated successes. I thrive in roles where I can use my high-level problem-solving skills to build smarter, faster, and more reliable systems
