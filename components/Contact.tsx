@@ -31,11 +31,40 @@ const socialLinks = [
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [cvEmail, setCvEmail] = useState('');
+  const [cvStatus, setCvStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const handleCopy = () => {
     navigator.clipboard.writeText(EMAIL);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleCvSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setCvStatus('loading');
+    try {
+      const res = await fetch('/api/send-cv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: cvEmail }),
+      });
+      if (res.ok) {
+        setCvStatus('success');
+        setCvEmail('');
+      } else {
+        setCvStatus('error');
+      }
+    } catch {
+      setCvStatus('error');
+    }
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setCvStatus('idle');
+    setCvEmail('');
   };
 
   return (
@@ -75,22 +104,34 @@ export default function Contact() {
             <p className="text-[#e8dfc8] text-sm mb-1">+420 604 963 525</p>
             <p className="text-[#e8dfc8] text-sm mb-8">{EMAIL}</p>
 
-            {/* Email CTA */}
-            <button
-              onClick={handleCopy}
-              className="group inline-flex items-center gap-3 bg-[#bead89] hover:bg-[#e8dfc8] text-[#143930] px-9 py-4 rounded-full font-semibold text-base transition-all duration-300 shadow-md shadow-[#bead89]/10 hover:shadow-lg hover:shadow-[#bead89]/15 hover:-translate-y-0.5"
-            >
-              {copied ? (
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button
+                onClick={handleCopy}
+                className="group inline-flex items-center gap-3 bg-[#bead89] hover:bg-[#e8dfc8] text-[#143930] px-9 py-4 rounded-full font-semibold text-base transition-all duration-300 shadow-md shadow-[#bead89]/10 hover:shadow-lg hover:shadow-[#bead89]/15 hover:-translate-y-0.5"
+              >
+                {copied ? (
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                )}
+                {copied ? 'Email Copied!' : "Let's Connect"}
+              </button>
+
+              <button
+                onClick={() => setModalOpen(true)}
+                className="group inline-flex items-center gap-3 border border-[#bead89]/50 hover:border-[#bead89] text-[#bead89] hover:bg-[#bead89]/10 px-9 py-4 rounded-full font-semibold text-base transition-all duration-300 hover:-translate-y-0.5"
+              >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-              )}
-              {copied ? 'Email Copied!' : "Let's Connect"}
-            </button>
+                Get my CV
+              </button>
+            </div>
           </div>
         </div>
 
@@ -130,6 +171,73 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      {/* CV Modal */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal} />
+
+          {/* Panel */}
+          <div className="relative w-full max-w-md rounded-2xl overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0a2220]/95 via-[#112b28]/95 to-[#143930]/95" />
+            <div className="absolute inset-0 border border-[#f8f1dd]/[0.1] rounded-2xl" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#bead89]/50 to-transparent" />
+
+            <div className="relative px-8 py-10">
+              {/* Close */}
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-[#8a8070] hover:text-[#f8f1dd] transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {cvStatus === 'success' ? (
+                <div className="text-center py-4">
+                  <div className="w-12 h-12 rounded-full bg-[#1a4a3a]/60 border border-[#3a7a58]/40 flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-[#5a9c78]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="font-display text-2xl font-bold text-[#f8f1dd] mb-2">On its way!</h3>
+                  <p className="text-[#c4ba9c] text-sm">Check your inbox, my CV should arrive shortly.</p>
+                </div>
+              ) : (
+                <>
+                  <p className="text-[#bead89] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Get my CV</p>
+                  <h3 className="font-display text-2xl font-bold text-[#f8f1dd] mb-2">Enter your email</h3>
+                  <p className="text-[#c4ba9c] text-sm mb-6">I&apos;ll send my CV straight to your inbox.</p>
+
+                  <form onSubmit={handleCvSubmit} className="space-y-4">
+                    <input
+                      type="email"
+                      required
+                      placeholder="your@email.com"
+                      value={cvEmail}
+                      onChange={(e) => setCvEmail(e.target.value)}
+                      className="w-full px-4 py-3 rounded-xl bg-[#0a2220]/60 border border-[#f8f1dd]/[0.1] text-[#f8f1dd] placeholder-[#52504e] text-sm focus:outline-none focus:border-[#bead89]/50 transition-colors"
+                    />
+
+                    {cvStatus === 'error' && (
+                      <p className="text-[#c87070] text-xs">Something went wrong. Please try again.</p>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={cvStatus === 'loading'}
+                      className="w-full bg-[#bead89] hover:bg-[#e8dfc8] disabled:opacity-60 text-[#143930] py-3 rounded-full font-semibold text-sm transition-all duration-300"
+                    >
+                      {cvStatus === 'loading' ? 'Sending…' : 'Send me the CV'}
+                    </button>
+                  </form>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
