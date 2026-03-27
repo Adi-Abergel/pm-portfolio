@@ -1,16 +1,18 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden bg-transparent">
-      {/* Checkerboard texture */}
-      
-      {/* Subtle vignette */}
-      
+    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+      {/* Decorative diagonal hatching — right side */}
+      <div className="absolute inset-0 pointer-events-none z-[1]" style={{
+        backgroundImage: 'repeating-linear-gradient(-45deg, rgba(190,173,137,0.11) 0px 1px, transparent 1px 22px)',
+        WebkitMaskImage: 'linear-gradient(270deg, black 0%, black 16%, transparent 34%)',
+        maskImage: 'linear-gradient(270deg, black 0%, black 16%, transparent 34%)',
+      }} />
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl pt-20 pb-24">
+      <div className="relative z-10 max-w-3xl lg:max-w-5xl pt-20 pb-24">
         {/* Logo */}
         <div className="relative inline-block mb-6 w-full max-w-xl mx-auto">
-          <img src="/logo-bg.svg" alt="" className="absolute inset-0 w-full h-full rounded-2xl object-cover opacity-80" />
+          <img src="/logo-bg.svg" alt="" className="absolute inset-0 w-full h-full rounded-2xl object-cover opacity-80 mix-blend-luminosity" style={{ maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 80%)', WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 80%)' }} />
           <img src="/logo.svg" alt="Adi Abergel" className="relative w-full px-8 py-6" />
         </div>
 
@@ -66,7 +68,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+{/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#e8dfc8] animate-float">
         <span className="text-[10px] uppercase tracking-widest">Scroll</span>
         <div className="w-px h-8 bg-gradient-to-b from-[#62604e] to-transparent" />

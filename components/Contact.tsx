@@ -69,8 +69,13 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-28 px-6 bg-transparent relative overflow-hidden">
-      {/* Checkerboard texture */}
-      
+      {/* Decorative diagonal hatching — right side */}
+      <div className="absolute inset-0 pointer-events-none z-[1]" style={{
+        backgroundImage: 'repeating-linear-gradient(-45deg, rgba(190,173,137,0.11) 0px 1px, transparent 1px 22px)',
+        WebkitMaskImage: 'linear-gradient(270deg, black 0%, black 16%, transparent 34%)',
+        maskImage: 'linear-gradient(270deg, black 0%, black 16%, transparent 34%)',
+      }} />
+
       {/* Subtle top fade & vignette */}
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0a2220]/18 to-transparent" />
       
@@ -108,7 +113,7 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={handleCopy}
-                className="group inline-flex items-center gap-3 bg-[#bead89] hover:bg-[#e8dfc8] text-[#143930] px-9 py-4 rounded-full font-semibold text-base transition-all duration-300 shadow-md shadow-[#bead89]/10 hover:shadow-lg hover:shadow-[#bead89]/15 hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-3 border border-[#bead89]/50 hover:border-[#bead89] text-[#bead89] hover:bg-[#bead89]/10 px-9 py-4 rounded-full font-semibold text-base transition-all duration-300 hover:-translate-y-0.5"
               >
                 {copied ? (
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

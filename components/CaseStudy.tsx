@@ -48,8 +48,7 @@ const toolColors: Record<string, string> = {
 export default function CaseStudy() {
   return (
     <section id="case-study" className="pt-10 pb-28 px-6 relative overflow-hidden bg-transparent">
-      {/* Checkerboard texture */}
-      
+
       {/* Subtle top fade & vignette */}
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0a2220]/18 to-transparent" />
       

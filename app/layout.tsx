@@ -34,7 +34,16 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${oldStandardTT.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* Global subtle diagonal hatching — right side */}
+        <div aria-hidden="true" style={{
+          position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 9999,
+          backgroundImage: 'repeating-linear-gradient(-45deg, rgba(190,173,137,0.055) 0px 1px, transparent 1px 22px)',
+          WebkitMaskImage: 'linear-gradient(270deg, black 0%, black 10%, transparent 22%)',
+          maskImage: 'linear-gradient(270deg, black 0%, black 10%, transparent 22%)',
+        }} />
+        {children}
+      </body>
     </html>
   );
 }

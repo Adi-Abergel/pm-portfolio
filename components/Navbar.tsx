@@ -69,7 +69,7 @@ export default function Navbar() {
           </Link>
           <button
             onClick={() => handleNavClick('#contact')}
-            className="ml-3 px-4 py-2 text-sm font-medium bg-[#bead89] hover:bg-[#e8dfc8] text-[#143930] rounded-lg transition-all duration-200 shadow-lg shadow-[#a07840]/20 hover:shadow-[#bead89]/30"
+            className="ml-3 px-4 py-2 text-sm font-medium bg-[#cfc09e] hover:bg-[#dcd1b0] text-[#143930] rounded-lg transition-all duration-200 shadow-lg shadow-[#a07840]/20 hover:shadow-[#cfc09e]/30"
           >
             Get in Touch
           </button>
@@ -112,7 +112,7 @@ export default function Navbar() {
           </Link>
           <button
             onClick={() => handleNavClick('#contact')}
-            className="mt-2 px-4 py-3 text-sm font-medium bg-[#bead89] hover:bg-[#e8dfc8] text-[#143930] rounded-lg transition-all text-center"
+            className="mt-2 px-4 py-3 text-sm font-medium bg-[#cfc09e] hover:bg-[#dcd1b0] text-[#143930] rounded-lg transition-all text-center"
           >
             Get in Touch
           </button>

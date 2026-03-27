@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Pattern Reference</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0e2d28;
+      color: #f8f1dd;
+      font-family: Georgia, serif;
+      padding: 48px 40px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #8a8070;
+      font-size: 0.85rem;
+      margin-bottom: 48px;
+      font-style: italic;
+      line-height: 1.6;
+      max-width: 640px;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #bead89;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(248, 241, 221, 0.08);
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px 32px;
+      margin-bottom: 36px;
+    }
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .option-letter {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #bead89;
+      margin-bottom: 2px;
+    }
+
+    .option-name {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #f8f1dd;
+      margin-bottom: 4px;
+    }
+
+    .option-desc {
+      font-size: 0.78rem;
+      color: #8a8070;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ─── Preview Panel ─────────────────────────────── */
+    .preview {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #163930 0%, #2e6b50 100%);
+      border: 1px solid rgba(248, 241, 221, 0.08);
+    }
+
+    .pattern-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .preview-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 2;
+    }
+
+    .mock-logo {
+      width: 260px;
+      height: 56px;
+      background: rgba(248, 241, 221, 0.10);
+      border-radius: 10px;
+      border: 1px solid rgba(248, 241, 221, 0.08);
+    }
+
+    .mock-sub {
+      width: 200px;
+      height: 12px;
+      background: rgba(248, 241, 221, 0.06);
+      border-radius: 4px;
+    }
+
+    .mock-sub.short {
+      width: 150px;
+      margin-top: -6px;
+    }
+
+    .mock-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .mock-btn {
+      width: 84px;
+      height: 30px;
+      border: 1px solid rgba(248, 241, 221, 0.18);
+      border-radius: 20px;
+    }
+
+    /* ─── Code Block ─────────────────────────────────── */
+    .code-block {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(248, 241, 221, 0.07);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.68rem;
+      color: #c4ba9c;
+      line-height: 1.7;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .code-comment { color: #62604e; }
+    .code-prop    { color: #bead89; }
+    .code-val     { color: #9abfa8; }
+
+    /* ═══════════════════════════════════════════════════
+       PATTERN DEFINITIONS
+    ═══════════════════════════════════════════════════ */
+
+    /* A — Side Column Grid
+       Vertical + faint horizontal lines on left/right thirds only,
+       masked out toward the center. */
+    .pattern-a {
+      background-image:
+        repeating-linear-gradient(90deg,
+          rgba(190, 173, 137, 0.14) 0px, rgba(190, 173, 137, 0.14) 1px,
+          transparent 1px, transparent 28px),
+        repeating-linear-gradient(0deg,
+          rgba(190, 173, 137, 0.05) 0px, rgba(190, 173, 137, 0.05) 1px,
+          transparent 1px, transparent 56px);
+      -webkit-mask-image: linear-gradient(90deg,
+        black 0%, black 18%,
+        transparent 36%, transparent 64%,
+        black 82%, black 100%);
+      mask-image: linear-gradient(90deg,
+        black 0%, black 18%,
+        transparent 36%, transparent 64%,
+        black 82%, black 100%);
+    }
+
+    /* B — Fine Mesh
+       Uniform 24 px grid across the whole surface. Barely visible —
+       adds a paper-like micro-texture without competing with content. */
+    .pattern-b {
+      background-image:
+        repeating-linear-gradient(90deg,
+          rgba(248, 241, 221, 0.065) 0px, rgba(248, 241, 221, 0.065) 1px,
+          transparent 1px, transparent 24px),
+        repeating-linear-gradient(0deg,
+          rgba(248, 241, 221, 0.065) 0px, rgba(248, 241, 221, 0.065) 1px,
+          transparent 1px, transparent 24px);
+    }
+
+    /* C — Diagonal Hatching (Sides)
+       45° hatching lines on the edges only, fading inward. More
+       dynamic than a straight grid — adds movement and visual weight
+       to the frame without any hard borders. */
+    .pattern-c {
+      background-image:
+        repeating-linear-gradient(45deg,
+          rgba(190, 173, 137, 0.11) 0px, rgba(190, 173, 137, 0.11) 1px,
+          transparent 1px, transparent 22px);
+      -webkit-mask-image: linear-gradient(90deg,
+        black 0%, black 16%,
+        transparent 34%, transparent 66%,
+        black 84%, black 100%);
+      mask-image: linear-gradient(90deg,
+        black 0%, black 16%,
+        transparent 34%, transparent 66%,
+        black 84%, black 100%);
+    }
+
+    /* D — Blueprint Two-Level Grid
+       Minor grid (20 px) + major grid (100 px), tinted sage-green.
+       Feels like engineering graph paper — precise and architectural. */
+    .pattern-d {
+      background-image:
+        repeating-linear-gradient(90deg,
+          rgba(180, 215, 195, 0.045) 0px, rgba(180, 215, 195, 0.045) 1px,
+          transparent 1px, transparent 20px),
+        repeating-linear-gradient(0deg,
+          rgba(180, 215, 195, 0.045) 0px, rgba(180, 215, 195, 0.045) 1px,
+          transparent 1px, transparent 20px),
+        repeating-linear-gradient(90deg,
+          rgba(180, 215, 195, 0.13) 0px, rgba(180, 215, 195, 0.13) 1px,
+          transparent 1px, transparent 100px),
+        repeating-linear-gradient(0deg,
+          rgba(180, 215, 195, 0.13) 0px, rgba(180, 215, 195, 0.13) 1px,
+          transparent 1px, transparent 100px);
+    }
+
+    /* E — Diamond Crosshatch
+       Both +45° and −45° lines creating a diamond / woven pattern
+       across the full surface. Even and meditative — like a subtle
+       fabric weave or Art Deco screen. */
+    .pattern-e {
+      background-image:
+        repeating-linear-gradient(45deg,
+          rgba(190, 173, 137, 0.075) 0px, rgba(190, 173, 137, 0.075) 1px,
+          transparent 1px, transparent 36px),
+        repeating-linear-gradient(-45deg,
+          rgba(190, 173, 137, 0.075) 0px, rgba(190, 173, 137, 0.075) 1px,
+          transparent 1px, transparent 36px);
+    }
+
+    /* ─── Implementation note ────────────────────────── */
+    .note {
+      border-top: 1px solid rgba(248, 241, 221, 0.08);
+      margin-top: 40px;
+      padding-top: 28px;
+    }
+    .note p {
+      color: #8a8070;
+      font-size: 0.82rem;
+      line-height: 1.8;
+      max-width: 760px;
+    }
+    .note code {
+      color: #bead89;
+      font-family: 'Courier New', monospace;
+      font-size: 0.78rem;
+    }
+
+    /* ─── Full-width option row ─────────────────────── */
+    .option-full {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .option-full .preview {
+      height: 260px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Background Pattern Reference</h1>
+  <p class="subtitle">
+    Decorative geometric overlay options for the Hero section background.
+    Each pattern is pure CSS — no images — layered semi-transparently over the existing
+    gradient + photo background. Previews simulate the green gradient; the real page will show
+    these patterns over the actual background image.
+  </p>
+
+  <div class="section-label">Options A – D</div>
+
+  <div class="options-grid">
+
+    <!-- ── Option A ── -->
+    <div class="option">
+      <div>
+        <div class="option-letter">Option A</div>
+        <div class="option-name">Side Column Grid</div>
+        <div class="option-desc">Vertical grid lines (with faint horizontal cross-lines) on the left and right thirds only, masked to zero toward the center. Frames the content like curtain columns without touching it.</div>
+      </div>
+      <div class="preview">
+        <div class="pattern-layer pattern-a"></div>
+        <div class="preview-content">
+          <div class="mock-logo"></div>
+          <div class="mock-sub"></div>
+          <div class="mock-sub short"></div>
+          <div class="mock-buttons">
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="code-block"><span class="code-comment">/* ::before  |  position: absolute inset-0 */</span>
+<span class="code-prop">background-image</span>:
+  <span class="code-val">repeating-linear-gradient</span>(90deg,
+    rgba(190,173,137,0.14) 0px 1px, transparent 1px 28px),
+  <span class="code-val">repeating-linear-gradient</span>(0deg,
+    rgba(190,173,137,0.05) 0px 1px, transparent 1px 56px);
+<span class="code-prop">mask-image</span>: linear-gradient(90deg,
+  black 0% 18%, transparent 36% 64%, black 82% 100%);</div>
+    </div>
+
+    <!-- ── Option B ── -->
+    <div class="option">
+      <div>
+        <div class="option-letter">Option B</div>
+        <div class="option-name">Fine Mesh</div>
+        <div class="option-desc">A uniform 24 px grid across the entire surface. So subtle it reads as texture rather than pattern — like laid paper. Works with any content placement and requires no masking.</div>
+      </div>
+      <div class="preview">
+        <div class="pattern-layer pattern-b"></div>
+        <div class="preview-content">
+          <div class="mock-logo"></div>
+          <div class="mock-sub"></div>
+          <div class="mock-sub short"></div>
+          <div class="mock-buttons">
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="code-block"><span class="code-comment">/* ::before  |  position: absolute inset-0 */</span>
+<span class="code-prop">background-image</span>:
+  <span class="code-val">repeating-linear-gradient</span>(90deg,
+    rgba(248,241,221,0.065) 0px 1px, transparent 1px 24px),
+  <span class="code-val">repeating-linear-gradient</span>(0deg,
+    rgba(248,241,221,0.065) 0px 1px, transparent 1px 24px);</div>
+    </div>
+
+    <!-- ── Option C ── -->
+    <div class="option">
+      <div>
+        <div class="option-letter">Option C</div>
+        <div class="option-name">Diagonal Hatching (Sides)</div>
+        <div class="option-desc">45° diagonal lines confined to the left and right edges, fading inward. More energetic than vertical columns — suggests motion or depth while still leaving the center completely clear.</div>
+      </div>
+      <div class="preview">
+        <div class="pattern-layer pattern-c"></div>
+        <div class="preview-content">
+          <div class="mock-logo"></div>
+          <div class="mock-sub"></div>
+          <div class="mock-sub short"></div>
+          <div class="mock-buttons">
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="code-block"><span class="code-comment">/* ::before  |  position: absolute inset-0 */</span>
+<span class="code-prop">background-image</span>:
+  <span class="code-val">repeating-linear-gradient</span>(45deg,
+    rgba(190,173,137,0.11) 0px 1px, transparent 1px 22px);
+<span class="code-prop">mask-image</span>: linear-gradient(90deg,
+  black 0% 16%, transparent 34% 66%, black 84% 100%);</div>
+    </div>
+
+    <!-- ── Option D ── -->
+    <div class="option">
+      <div>
+        <div class="option-letter">Option D</div>
+        <div class="option-name">Blueprint Two-Level Grid</div>
+        <div class="option-desc">Minor lines every 20 px + bolder major lines every 100 px, tinted sage-green. Feels like engineering graph paper or an architectural schematic — structured and precise.</div>
+      </div>
+      <div class="preview">
+        <div class="pattern-layer pattern-d"></div>
+        <div class="preview-content">
+          <div class="mock-logo"></div>
+          <div class="mock-sub"></div>
+          <div class="mock-sub short"></div>
+          <div class="mock-buttons">
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+            <div class="mock-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="code-block"><span class="code-comment">/* ::before  |  position: absolute inset-0 */</span>
+<span class="code-prop">background-image</span>:
+  <span class="code-val">repeating-linear-gradient</span>(90deg,
+    rgba(180,215,195,0.045) 0px 1px, transparent 1px 20px),
+  <span class="code-val">repeating-linear-gradient</span>(0deg,
+    rgba(180,215,195,0.045) 0px 1px, transparent 1px 20px),
+  <span class="code-val">repeating-linear-gradient</span>(90deg,
+    rgba(180,215,195,0.13) 0px 1px, transparent 1px 100px),
+  <span class="code-val">repeating-linear-gradient</span>(0deg,
+    rgba(180,215,195,0.13) 0px 1px, transparent 1px 100px);</div>
+    </div>
+
+  </div><!-- /options-grid -->
+
+
+  <!-- ── Option E (full width) ── -->
+  <div class="section-label" style="margin-top: 8px;">Option E</div>
+  <div class="option-full" style="margin-bottom: 48px;">
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div>
+        <div class="option-letter">Option E</div>
+        <div class="option-name">Diamond Crosshatch</div>
+        <div class="option-desc">Both +45° and −45° lines crossing to form a diamond / woven pattern across the full surface. Even and meditative — reads like a subtle fabric weave or an Art Deco screen. The gold tint ties it to the existing palette.</div>
+      </div>
+      <div class="code-block"><span class="code-comment">/* ::before  |  position: absolute inset-0 */</span>
+<span class="code-prop">background-image</span>:
+  <span class="code-val">repeating-linear-gradient</span>(45deg,
+    rgba(190,173,137,0.075) 0px 1px,
+    transparent 1px 36px),
+  <span class="code-val">repeating-linear-gradient</span>(-45deg,
+    rgba(190,173,137,0.075) 0px 1px,
+    transparent 1px 36px);</div>
+    </div>
+    <div class="preview" style="height: 280px;">
+      <div class="pattern-layer pattern-e"></div>
+      <div class="preview-content">
+        <div class="mock-logo"></div>
+        <div class="mock-sub"></div>
+        <div class="mock-sub short"></div>
+        <div class="mock-buttons">
+          <div class="mock-btn"></div>
+          <div class="mock-btn"></div>
+          <div class="mock-btn"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── Implementation note ── -->
+  <div class="note">
+    <div class="section-label" style="margin-bottom: 12px;">Implementation Note</div>
+    <p>
+      All patterns are applied via a <code>&lt;div&gt;</code> (or <code>::before</code> pseudo-element)
+      inside the Hero <code>&lt;section&gt;</code>, with
+      <code>position: absolute; inset: 0; pointer-events: none; z-index: 1</code>.
+      The existing content wrapper stays at <code>z-index: 10</code>.
+      No images needed — pure CSS gradients only. Options A and C use
+      <code>mask-image</code> (supported in all modern browsers) to restrict the pattern
+      to the edges. Options B, D, and E cover the full surface but are faint enough
+      to be invisible behind the background photo.
+      <br><br>
+      Patterns can also be combined — for example, B (fine mesh) layered under A (side columns)
+      gives a grid texture everywhere with stronger vertical framing at the edges.
+    </p>
+  </div>
+
+</body>
+</html>
