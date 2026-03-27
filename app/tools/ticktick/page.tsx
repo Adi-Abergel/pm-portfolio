@@ -67,9 +67,7 @@ const useCases = [
 
 export default function TickTickPage() {
   return (
-    <main className="min-h-screen bg-[#143930] text-white">
-      <div className="fixed inset-0 checker-bg pointer-events-none" />
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_#143930_80%)] pointer-events-none" />
+    <main className="min-h-screen text-white">
 
       {/* ── Back nav ── */}
       <div className="relative z-10 pt-8 px-6 max-w-5xl mx-auto">
