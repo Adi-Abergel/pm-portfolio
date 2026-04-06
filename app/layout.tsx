@@ -21,7 +21,22 @@ const oldStandardTT = Old_Standard_TT({
 
 export const metadata: Metadata = {
   title: "Adi Abergel | Project Manager",
-  description: "Aspiring Project Manager specializing in tools like Jira, Make, Notion, and Slack.",
+  description: "Project Manager specializing in automation tools and AI utilization.",
+  openGraph: {
+    title: "Adi Abergel | Project Manager",
+    description: "Project Manager specializing in automation tools and AI utilization.",
+    url: "https://adi-abergel.com",
+    siteName: "Adi Abergel",
+    type: "website",
+    images: [
+      {
+        url: "https://adi-abergel.com/logo.png",
+        width: 1042,
+        height: 625,
+        alt: "Adi Abergel | Project Manager",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

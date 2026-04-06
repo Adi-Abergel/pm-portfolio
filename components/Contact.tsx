@@ -164,15 +164,19 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="text-center pt-8 border-t border-[#f8f1dd]/[0.05]">
-          <div className="flex items-center justify-center gap-2 text-[#e8dfc8] text-xs">
-            <span>Built with</span>
-            <span className="text-[#e8dfc8] font-medium">Next.js</span>
-            <span className="text-[#4a4030]">·</span>
-            <span className="text-[#e8dfc8] font-medium">Tailwind CSS</span>
-            <span className="text-[#4a4030]">·</span>
-            <span className="text-[#e8dfc8] font-medium">Vercel</span>
-            <span className="text-[#4a4030]">·</span>
-            <span>Adi Abergel {new Date().getFullYear()}</span>
+          <div className="flex flex-col items-center gap-1.5 text-[#e8dfc8] text-xs">
+            <span className="text-center">Adi Abergel {new Date().getFullYear()}</span>
+            <div className="flex items-center justify-center gap-2">
+              <span>Built with</span>
+              <span className="text-[#4a4030]">·</span>
+              <span className="font-medium">Claude Code</span>
+              <span className="text-[#4a4030]">·</span>
+              <span className="font-medium">Next.js</span>
+              <span className="text-[#4a4030]">·</span>
+              <span className="font-medium">Tailwind CSS</span>
+              <span className="text-[#4a4030]">·</span>
+              <span className="font-medium">Vercel</span>
+            </div>
           </div>
         </div>
       </div>
